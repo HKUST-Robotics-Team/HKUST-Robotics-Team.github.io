@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="data:image/png;base64,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" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2021 RDC Scoreboard</title>
+    <script type="module" crossorigin src="/assets/index.44c9d646.js"></script>
+    <link rel="stylesheet" href="/assets/index.5761e8aa.css">
+  </head>
+  <body class="flex flex-col min-h-screen bg-gray-300">
+    <div
+      class="flex mx-auto flex-1 p-4 justify-center items-stretch lg:container"
+    >
+      <aside>
+        <div class="bg-cyan-300 order-0 mt-20 mr-5 big-score">
+          <div class="select-wrapper relative hover:after:block">
+            <select
+              class="
+                team-name
+                w-full
+                text-size-3xl
+                cursor-pointer
+                overflow-visible
+                children:bg-cyan-200
+              "
+            >
+              <option value="-1" selected>Blue Team</option>
+            </select>
+          </div>
+          <h1 id="blue-score" class="text-size-8xl">0</h1>
+        </div>
+      </aside>
+
+      <aside class="bg-red-300 order-2 mt-20 ml-5 big-score">
+        <div class="select-wrapper relative hover:after:block">
+          <select
+            class="
+              team-name
+              w-full
+              text-size-3xl
+              cursor-pointer
+              overflow-visible
+              children:bg-red-200
+            "
+          >
+            <option value="-1" selected>Red Team</option>
+          </select>
+        </div>
+        <h1 id="red-score" class="text-size-8xl">0</h1>
+      </aside>
+
+      <main class="flex flex-col">
+        <div class="flex flex-col h-full items-center">
+          <header aria-label="top-bar" class="flex my-2 py-1 gap-5">
+            <button
+              id="start"
+              class="
+                top-bar-text
+                text-disable
+                pointer-events-none
+                not-disabled:pointer-events-auto
+              "
+            >
+              START
+            </button>
+            <fieldset
+              id="countdown-timer"
+              class="text-disable !text-shadow-none"
+              disabled
+            >
+              03:00.00
+            </fieldset>
+            <button
+              id="stop"
+              class="
+                top-bar-text
+                text-disable
+                pointer-events-none
+                hidden
+                not-disabled:pointer-events-auto
+              "
+            >
+              STOP
+            </button>
+            <button
+              id="reset"
+              class="
+                top-bar-text
+                text-disable
+                pointer-events-none
+                not-disabled:pointer-events-auto
+              "
+            >
+              RESET
+            </button>
+          </header>
+          <div aria-label="game-field" class="max-w-screen-lg relative">
+            <img src="/assets/gamefield.e2448463.png" alt="gamefield" />
+            <button
+              id="red-plate"
+              class="
+                bg-red-700
+                top-1/2
+                left-[19.7%]
+                ellipse-lg
+                counter
+                hover:bg-red-400
+              "
+              text="white size-3xl"
+              oncontextmenu="event.preventDefault();"
+            >
+              0
+            </button>
+            <button
+              id="blue-plate"
+              class="
+                bg-blue-700
+                top-1/2
+                left-[80.3%]
+                ellipse-lg
+                counter
+                hover:bg-blue-400
+              "
+              text="white size-3xl"
+              oncontextmenu="event.preventDefault();"
+            >
+              0
+            </button>
+            <button
+              id="blue-pot-1"
+              class="
+                bg-cyan-300
+                top-[38%]
+                left-[69%]
+                ellipse-sm
+                counter
+                hover:bg-cyan-400
+              "
+              oncontextmenu="event.preventDefault();"
+            >
+              0
+            </button>
+            <button
+              id="blue-pot-2"
+              class="
+                bg-cyan-300
+                top-[63%]
+                left-[69%]
+                ellipse-sm
+                counter
+                hover:bg-cyan-400
+              "
+              oncontextmenu="event.preventDefault();"
+            >
+              0
+            </button>
+            <button
+              id="red-pot-1"
+              class="
+                bg-rose-300
+                top-[38%]
+                left-[31%]
+                ellipse-sm
+                counter
+                hover:bg-rose-400
+              "
+              oncontextmenu="event.preventDefault();"
+            >
+              0
+            </button>
+            <button
+              id="red-pot-2"
+              class="
+                bg-rose-300
+                top-[63%]
+                left-[31%]
+                ellipse-sm
+                counter
+                hover:bg-rose-400
+              "
+              oncontextmenu="event.preventDefault();"
+            >
+              0
+            </button>
+            <button
+              id="blue-smartcar"
+              class="
+                bg-cool-gray-500
+                top-[78.5%]
+                left-[31%]
+                rectangle
+                counter
+                hover:bg-cool-gray-400
+              "
+              oncontextmenu="event.preventDefault();"
+            >
+              0
+            </button>
+            <button
+              id="red-smartcar"
+              class="
+                bg-cool-gray-500
+                top-[78.5%]
+                left-[69%]
+                rectangle
+                counter
+                hover:bg-cool-gray-400
+              "
+              oncontextmenu="event.preventDefault();"
+            >
+              0
+            </button>
+          </div>
+          <div
+            aria-label="middle-bar"
+            class="
+              flex
+              max-w-screen-lg
+              my-2
+              w-full
+              py-1
+              justify-center
+              items-center
+              relative
+            "
+          >
+            <button
+              id="cal-final-score"
+              class="text-disable ml-2 <sm:text-size-xs action-btn mr-auto"
+            >
+              <svg
+                width="12"
+                height="16"
+                viewBox="0 0 12 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11 2H2.92188L6.85938 7.51562C7.04688 7.83854 7.05208 8.16146 6.875 8.48438C6.85417 8.51562 6.51562 8.99219 5.85938 9.91406C5.20312 10.8359 4.55208 11.7474 3.90625 12.6484L2.9375 14H11C11.2812 14 11.5182 14.099 11.7109 14.2969C11.9036 14.4948 12 14.7318 12 15.0078C12 15.2839 11.9036 15.5182 11.7109 15.7109C11.5182 15.9036 11.2812 16 11 16H1C0.71875 16 0.481771 15.9036 0.289062 15.7109C0.0963542 15.5182 0 15.2812 0 15C0 14.8125 0.104167 14.5729 0.3125 14.2812L4.78125 8.01562C1.77083 3.79688 0.21875 1.61979 0.125 1.48438C0.0416667 1.32812 0 1.16667 0 1C0 0.71875 0.0989583 0.481771 0.296875 0.289062C0.494792 0.0963542 0.729167 0 1 0H11C11.2812 0 11.5182 0.0963542 11.7109 0.289062C11.9036 0.481771 12 0.716146 12 0.992188C12 1.26823 11.9036 1.50521 11.7109 1.70312C11.5182 1.90104 11.2812 2 11 2Z"
+                  fill="black"
+                />
+              </svg>
+              Final Score
+            </button>
+            <fieldset
+              id="countup-timer"
+              disabled
+              class="
+                font-bold
+                text-disable
+                !text-shadow-none
+                md:text-size-lg
+                absolute
+                left-auto
+                right-auto
+              "
+            >
+              00:00.00
+            </fieldset>
+            <button
+              id="load"
+              class="text-disable ml-2 <sm:text-size-xs action-btn ml-auto"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="upload"
+                class="w-4 h-4"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
+                ></path>
+              </svg>
+              Load JSON
+            </button>
+            <button
+              id="save"
+              class="text-disable mx-2 <sm:text-size-xs action-btn"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="file-download"
+                class="w-4 h-4"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"
+                ></path>
+              </svg>
+              Save JSON
+            </button>
+          </div>
+          <section
+            aria-label="record"
+            class="
+              flex-grow flex
+              max-w-screen-lg
+              text-size-sm
+              mb-4
+              w-full
+              min-h-64
+              max-h-100
+              gap-5
+            "
+          >
+            <div
+              class="
+                rounded-xl
+                flex flex-col
+                bg-cyan-300 bg-opacity-50
+                flex-1
+                relative
+                shadow
+              "
+            >
+              <div
+                class="
+                  bg-gray-400 bg-opacity-20
+                  top-0
+                  right-4/12
+                  bottom-0
+                  left-2/12
+                  absolute
+                "
+              ></div>
+              <header
+                class="
+                  border-transparent
+                  flex
+                  border-2 border-b-gray-700
+                  py-2
+                  record
+                  font-bold
+                "
+              >
+                <span>Time</span>
+                <span>Action</span>
+                <span>Total Score</span>
+              </header>
+              <div class="flex-grow relative">
+                <div id="blue-scoreboard" class="scoreboard"></div>
+              </div>
+            </div>
+            <div
+              class="
+                rounded-xl
+                flex flex-col
+                bg-red-300 bg-opacity-50
+                flex-1
+                relative
+                shadow
+              "
+            >
+              <div
+                class="
+                  bg-white bg-opacity-20
+                  top-0
+                  right-4/12
+                  bottom-0
+                  left-2/12
+                  absolute
+                "
+              ></div>
+              <header
+                class="
+                  border-transparent
+                  flex
+                  border-2 border-b-gray-700
+                  py-2
+                  record
+                  font-bold
+                "
+              >
+                <span>Time</span>
+                <span>Action</span>
+                <span>Total Score</span>
+              </header>
+              <div class="flex-grow relative">
+                <div id="red-scoreboard" class="scoreboard"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    
+    
+    
+  </body>
+</html>
